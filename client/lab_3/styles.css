@@ -1,7 +1,92 @@
+
 * {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.header {
+  display: flex;
+  background-color: rgb(77,162,161);
+}
+.header > .title {
+  padding: 10px;
+  flex: 0 0 100%;
+}
+.header > .nav_bar {
+  background-color: rgb(90,149,217);
+  padding: 20px;
+  flex: 0 0 100%;
+  display: inline-flex;
+  justify-content: center;
+}
+.header > .nav_bar > .nav_wrapper {
+  border: white 1px solid;
+  color: white;
+  
+  flex: 0 0 50%;
+  display: inline-flex;
+  justify-self: flex-end;
+  align-self: center;
+}
+.header > .nav_bar > .nav_wrapper > p {
+  margin-right: auto;
+  border: none;
+}
+.header > .nav_bar > .nav_wrapper > nav {
+  border: white 1px solid;
+}
+
+.wrapper > .subject_container {
+  background-color: rgb(215,233,254);
+
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.wrapper > .subject_container > img {  
+  padding: 60px;  
+  justify-self: flex-start;
+}
+.wrapper > .subject_container > .nav_wrapper {
+  font-weight: bold;
+  color: rgb(77,162,161);
+  padding: 10px;
+
+  flex: 0 0 50%;
+  display: inline-flex;
+  justify-self: flex-end;
+  align-self: center;
+
+}
+.subject_container > .nav_wrapper > nav > .project {
+  background-color: blue;
+  margin-right: auto;
+}
+.subject_container > .nav_wrapper > nav > a{
+  background-color: green;
+}
+
+.wrapper > .image_container {
+  display: inline-flex;
+  flex: 0 0 100%;
+
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255,255,255);
+}
+
+.footer {
+  display: inline-flex;
+  flex: 0 0 100%;
+
+  background-color: rgb(77,162,161);
+
+}
+.footer > div{
+  background-color: rgb(90,149,217);
+}
+.footer > .item2{
+  background-color: rgb(215,233,254);
+}
