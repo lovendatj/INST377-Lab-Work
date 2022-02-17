@@ -5,13 +5,17 @@
     display: flex;
     flex-wrap: wrap;
 
-    background-color: yellow;
+    background-color: white;
+    border: 1px solid black;
 }
 
 .grid > div {
     width: 20px;
     height: 20px;
     
-    border: 1px solid white;
-    background-color: gray;
+    border: 1px solid gray;
+}
+
+.tetromino {
+    background-color: red;
 }
