@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const carousel = document.querySelector('.carousel');
-    let images = ['image_1.jpg','image_2.jpg','image_3.jpg','image_4.jpg','image_5.jpg']
+    let images = ['one.svg','two.svg','three.svg','four.svg','five.svg']
     load_images(images, carousel)
     const carousel_images = document.querySelectorAll('.carousel-image');
     update_carousel(carousel_images, 0);
