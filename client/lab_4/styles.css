@@ -1,0 +1,142 @@
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.wrapper{
+display: flex;
+flex-direction: column;
+}
+
+.header {
+width: 100%;
+background-color: rgb(77,162,161);
+
+display: inline-flex;
+flex-flow: column;
+align-self: center;
+}
+.header > .title {
+padding: 10px;
+flex-direction: flex-start;
+}
+.header > .nav_bar {
+background-color: rgb(90,149,217);
+padding: 20px;
+flex-direction: flex-end;
+display: inline-flex;
+justify-content: center;
+}
+.header > .nav_bar > .nav_wrapper {
+border: white 1px solid;
+color: white;
+
+flex: 0 0 50%;
+display: inline-flex;
+justify-self: flex-end;
+align-self: center;
+}
+.header > .nav_bar > .nav_wrapper > p {
+margin-right: auto;
+border: none;
+}
+.header > .nav_bar > .nav_wrapper > nav {
+border: white 1px solid;
+}
+
+.wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: orange;
+}
+
+.content_head {
+display: inline-flex;
+flex-flow: column;
+width: 100%;
+
+justify-self: center;
+align-items: center;
+
+padding: 20px;
+background-color: rgb(215,233,254);
+}
+.content_head > img {
+padding: 80px;
+}
+.content_head > nav {
+padding-bottom: 10px;
+display: inline-flex;
+justify-content: space-between;
+flex-flow: row;
+
+width: 60%;
+}
+
+.image_grid{
+display: inline-flex;
+flex-flow: row;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+background-color: rgb(215,233,254);
+}
+.image_grid > .carousel {
+overflow: hidden;
+max-width: 600px;
+position: relative;
+}
+.carousel .carousel-image{
+width: 600px;
+height: 600px;
+} 
+.carousel > .carousel-image,
+.carousel > .carousel-image--hidden {
+display:none;
+}
+.image_grid > button {
+background-color: lightgray;
+outline: none;
+cursor: pointer;
+border: 0px solid white;
+border-radius: 5px;
+padding: 10px;
+}
+.image_grid > button:hover {
+    background-color: orange;
+}
+.image_grid > .active{
+background-color: orange;
+border: 2px solid green;
+}
+.image_grid > button > span {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: medium;
+    line-height: 1em;
+}
+
+
+
+.footer {
+display: inline-flex;
+width: 100%;
+height: 300px;
+justify-content: space-between;
+background-color: rgb(77,162,161);
+
+}
+.footer > div{
+background-color: rgb(90,149,217);
+width: 20%;
+}
+.footer > .item_2{
+
+background-color: rgb(215,233,254);
+width: 60%;
+}
