@@ -1,7 +1,7 @@
 // DOM Event Listener
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.querySelector('.grid');
-    const squares = document.querySelectorAll('.grid div');
+    let squares = document.querySelectorAll('.grid div');
     const scoreDisplay = document.querySelector('#score');
     const startBtn = document.querySelector('#start-button');
     const nextUp = document.querySelector('.mini-grid');
@@ -18,10 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Draw Shapes
     let currentPosition = 4;
     let currentRotation = 0;
+
     let upnextIndex = 0;
     let upnextRandom = 0;
-    const shape_index= randomShape(theTetrominoes.length)
-    let current = theTetrominoes[shape_index][currentRotation];
+
+    let random = Math.floor(Math.random() * theTetrominoes.length);
+    let current = theTetrominoes[random][currentRotation];
 
     timerId = null;
 
@@ -33,6 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
             timerId = null;
         } else {
             timerId = setInterval(moveDown, 1000);
+            nextRandom = Math.floor(Math.random() * theTetrominoes.length);
+            displayNextShape();
         }   
     });
 
@@ -49,7 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 squares[index].classList.remove('taken')
                 squares[index].classList.remove('tetromino')
                 })
-                const squaresRemoved = squares.splice(i, width)
+                const squaresRemoved = Array.from(squares).splice(i, width)
+                _log(`type: ${typeof(squares)} squares: ${squares}`)
                 squares = squaresRemoved.concat(squares)
                 squares.forEach(cell => grid.appendChild(cell))
             }
@@ -131,8 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             // The L Shape
             [
-                [width,width+1,width+2,width*2],
-                [width+1, width*2-1,width*2,width*2+1],
+                [0, width, width*2, width*2+1],
+                [width,width+1,width+2, 2],
                 [0,1,width+1,width*2+1],
                 [width-1, width,width+1,width*2-1]
             ],
@@ -210,13 +215,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if(currentRotation === current.length) {
             currentRotation = 0;
         }
-        current = theTetrominoes[upnextRandom][currentRotation];
+        current = theTetrominoes[random][currentRotation];
         drawShapes();
     }
 
-    function randomShape (shape_len)   {
-        return Math.floor(Math.random()*shape_len)
-    }
 
     function _log (message)  {
         console.log(message);
