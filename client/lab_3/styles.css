@@ -77,12 +77,8 @@
   width: 60%;
 }
 
- /* 
-  3 2 5
-  1 4
- */
 .image_grid{
-  width: 1000px;
+  width: 900px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
