@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="additional_styles.css">
+        
+        <meta charset="utf-8">
+        <title>John Murray - HTML Forms, CSS Frameworks, HTTP Methods</title>
+        
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <div class="notification is-warning">     
+                    <h1 class="form-header">John Murray - Lab 5: HTML Forms, CSS Frameworks, HTTP Methods</h1>
+                </div>
+            </div>
+            <div class="content-wrapper columns is-centered is-vcentered ">            
+                <!-- Form, First Column -->
+                <div class="form-container is-one-quarter">
+                    <form class="main-form" method="GET">
+                        <div class="field">
+                            <label class="label" for="first_name"> First Name</label>
+                            <div class="control">
+                                <input class="input" type="text" id="first_name" name="first_name" placeholder="Text input"/>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label" for="food_pref">Food Preference</label>    
+                            <div class="control">
+                                <input class="input" type="text" id="food_pref" name="food_pref" placeholder="Text input"/>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Veggie or Vegan?</label>
+                            <div class="control vegan_option">
+                                <label class="radio">
+                                    <input type="radio" name="veggie">
+                                    Yes
+                                    </label>
+                                    <label class="radio">
+                                    <input type="radio" name="vegan">
+                                    No
+                                    </label>
+    
+                            </div>
+                        </div>
+                        <div class="field">
+                            <button type="submit" class="submit button is-primary">Submit</button>
+                        </div>
+                    </form>  
+                </div>
+                
+                <!-- Response, Second Column -->
+                <div class="form-response container column is-one-third">
+                    <p> This is going to be something in two weeks. </p>
+                </div>
+            </div>
+        </div>
+        
+        
+        <script src="script.js"></script>
+    </body>
+</html>
