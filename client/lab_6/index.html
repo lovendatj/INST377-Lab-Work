@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <head>    
         <link rel="stylesheet" href="styles.css"/>
         <link rel="stylesheet" href="additional_styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    
         
         <meta charset="utf-8">
         <title>John Murray - HTML Forms, CSS Frameworks, HTTP Methods</title>
         
     </head>
     <body>
-        <div class="wrapper">
-            <div class="header">
-                <div class="notification is-warning">     
+        <div class="wrapper columns content-wrapper">
+            <div class="header column is-full">
+                <div class="notification is-warning is-full">     
                     <h1 class="form-header">John Murray - Lab 5: HTML Forms, CSS Frameworks, HTTP Methods</h1>
                 </div>
             </div>
-            <div class="content-wrapper columns is-centered is-vcentered ">            
+            <div class="content-wrapper columns ">            
                 <!-- Form, First Column -->
-                <div class="form-container is-one-quarter">
+                <div class="form-container column">
                     <form class="main-form" method="GET">
                         <div class="field">
                             <label class="label" for="first_name"> First Name</label>
@@ -53,8 +54,9 @@
                 </div>
                 
                 <!-- Response, Second Column -->
-                <div class="form-response container column is-one-third">
-                    <p> This is going to be something in two weeks. </p>
+                <div class="form-response column is-three-quarters">
+                    <p>Restaurant List</p>
+                    <ul class="resto-list"></ul>
                 </div>
             </div>
         </div>

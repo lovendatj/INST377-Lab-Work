@@ -23,7 +23,7 @@ body {
 
 /* Page Layout */
 .columns {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
 }
 
