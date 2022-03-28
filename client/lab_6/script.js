@@ -4,12 +4,12 @@ async function mainEvent() { // the async keyword means we can make API requests
 
   const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
   const arrayFromJson = await results.json(); // This changes it into data we can use - an object
+  let currentArray = [];
 
   if (arrayFromJson.data.length > 0) {
-    console.log(arrayFromJson.data);
+    
     form.addEventListener('submit', async (submitEvent) => { // async has to be declared all the way to get an await
       submitEvent.preventDefault(); // This prevents your page from refreshing!
-      console.log('form submission'); 
       submit.style.display = 'block';
       dataHandler(arrayFromJson.data);
     });
@@ -17,7 +17,6 @@ async function mainEvent() { // the async keyword means we can make API requests
 }
 
 const dataHandler = (data) => {
-  console.log('dataHandler');
   const randIntInclusive = (min, max) => { return Math.floor(Math.random() * (max - min + 1)) + min; };
   const range = [ ... Array(15).keys() ];
   const restList = document.querySelector('.resto-list');
