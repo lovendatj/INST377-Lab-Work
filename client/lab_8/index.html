@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+        <link rel="stylesheet" href="styles.css"/>
+    
+        
+        <meta charset="utf-8">
+        <title>John Murray - HTML Forms, CSS Frameworks, HTTP Methods</title>
+        
+    </head>
+    <body>
+        <div class="wrapper columns">
+            <div class="header column is-full">
+                <div class="notification is-warning is-full">     
+                    <h1 class="form-header">John Murray - Lab 7: HTML Forms, CSS Frameworks, HTTP Methods</h1>
+                </div>
+            </div>
+            <div class="content-wrapper columns ">            
+                <!-- Form, First Column -->
+                <div class="column form-container">
+                    <form class="main-form" method="GET">
+                        <div class="field">
+                            <label class="label" for="resto_name"> Restaurant Name</label>
+                            <div class="control">
+                                <input class="input" type="text" id="resto_name" name="first_name" placeholder="Text input"/>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label" for="zipcode">Zipcode</label>    
+                            <div class="control">
+                                <input class="input" type="text" id="zipcode" name="food_pref" placeholder="Text input"/>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Veggie or Vegan?</label>
+                            <div class="control vegan_option">
+                                <label class="radio">
+                                    <input type="radio" name="veggie">
+                                    Yes
+                                    </label>
+                                    <label class="radio">
+                                    <input type="radio" name="vegan">
+                                    No
+                                    </label>
+    
+                            </div>
+                        </div>
+                        <div class="field">
+                            <button type="submit" class="submit button is-primary">Submit</button>
+                        </div>
+                    </form>  
+                </div>
+                <div class="column map-container">
+                    <div id="map"></div>
+                </div>
+                <!-- Response, Second Column -->
+                <div class="column form-response">
+                    <p>Restaurant List</p>
+                    <ul class="resto-list"></ul>
+                </div>
+            </div>
+        </div>
+        
+        
+        <script src="script.js"></script>
+    </body>
+</html>
